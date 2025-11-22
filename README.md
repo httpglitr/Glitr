@@ -1,4 +1,4 @@
-[malwahr_skade_portal (1).html](https://github.com/user-attachments/files/23687177/malwahr_skade_portal.1.html)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
