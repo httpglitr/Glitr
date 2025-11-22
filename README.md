@@ -1,3 +1,5 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,7 +146,7 @@
 
     <nav>
         <div class="logo">
-            <img src="image_0.png" alt="MALWARE Logo">
+            <img src="Simple%20Malware.png" alt="MALWARE Logo">
         </div>
         <div class="nav-links">
             <a href="#about">About</a>
@@ -154,7 +156,7 @@
     </nav>
 
     <header class="hero">
-        <img src="image_0.png" alt="MALWARE Brand Logo" class="hero-logo">
+        <img src="Simple%20Malware.png" alt="MALWARE Brand Logo" class="hero-logo">
         <p class="subtitle" id="subtitle-text">INFECTIOUS DESIGN // SYSTEM OVERRIDE</p>
         <button class="cta-button" onclick="scrambleText()">INITIATE PROTOCOL</button>
     </header>
@@ -192,7 +194,6 @@
         // --- JAVASCRIPT INTERACTIVITY ---
         
         // Function to scramble text effect on the button click
-        // Now targets the subtitle since the main title is an image
         function scrambleText() {
             const title = document.getElementById('subtitle-text');
             const originalText = title.innerText;
@@ -211,7 +212,7 @@
                 
                 if(iterations >= originalText.length){ 
                     clearInterval(interval);
-                    title.innerText = originalText; // Ensure it returns to original
+                    title.innerText = originalText;
                 }
                 
                 iterations += 1/3;
