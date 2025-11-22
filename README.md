@@ -5,15 +5,23 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MALWARE | Brand Official</title>
+    <title>MALWARE | Soft Systems</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
-        /* --- CSS STYLING --- */
+        /* --- ORGANIC CSS STYLING --- */
         :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e0e0e0;
-            --accent-color: #00ff41; /* Matrix Green */
-            --secondary-accent: #ff0055; /* Glitch Pink */
-            --font-main: 'Courier New', Courier, monospace;
+            /* Palette: Deep Organic Dark with Dusty Rose Accents */
+            --bg-color: #1a181a;       /* Very dark warm grey/purple */
+            --card-bg: #252225;        /* Slightly lighter card background */
+            --text-color: #e6dee0;     /* Off-white pinkish text */
+            --accent-color: #d68c9e;   /* Dusty Rose */
+            --secondary-accent: #a89fce; /* Soft Lavender */
+            
+            /* Fonts */
+            --font-logo: 'Silkscreen', cursive; /* The Pixel Font */
+            --font-body: 'Space Mono', monospace; /* Clean, tech but soft */
         }
 
         * {
@@ -25,40 +33,45 @@ HTML
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-main);
+            font-family: var(--font-body);
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.7; /* More breathing room for text */
         }
 
-        /* Navigation */
+        /* Navigation - Glassmorphism effect */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            border-bottom: 1px solid #333;
             position: fixed;
             width: 100%;
-            background-color: rgba(10, 10, 10, 0.9);
+            background-color: rgba(26, 24, 26, 0.85); /* See-through */
+            backdrop-filter: blur(8px); /* Blurs what's behind it */
             z-index: 1000;
+            border-bottom: 1px solid rgba(214, 140, 158, 0.2);
         }
 
-        .logo img {
-            height: 40px; /* Adjusted for navbar */
-            width: auto;
+        .logo-text {
+            font-family: var(--font-logo);
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+            cursor: pointer;
         }
 
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
             margin-left: 30px;
-            text-transform: uppercase;
             font-size: 0.9rem;
+            opacity: 0.7;
+            transition: 0.3s;
         }
 
         .nav-links a:hover {
+            opacity: 1;
             color: var(--secondary-accent);
-            text-decoration: line-through;
         }
 
         /* Hero Section */
@@ -69,55 +82,77 @@ HTML
             justify-content: center;
             align-items: center;
             text-align: center;
+            /* Subtle organic gradient in background */
+            background: radial-gradient(circle at 50% 50%, rgba(214, 140, 158, 0.05) 0%, rgba(26, 24, 26, 0) 60%);
         }
 
-        /* Main Logo Integration */
-        .hero-logo {
-            max-width: 80%;
-            height: auto;
-            margin-bottom: 30px;
+        /* The Main Logo Text */
+        h1.brand-name {
+            font-family: var(--font-logo);
+            font-size: 5rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 20px rgba(214, 140, 158, 0.3);
+            /* Organic Float Animation */
+            animation: float 6s ease-in-out infinite;
         }
 
         .subtitle {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            opacity: 0;
-            animation: fadeIn 2s forwards 1s;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--secondary-accent);
+            opacity: 0.8;
+            font-weight: 400;
+            letter-spacing: 2px;
         }
 
         /* Content Section */
         .section {
-            padding: 80px 50px;
-            border-top: 1px solid #333;
+            padding: 100px 50px;
+        }
+
+        .section-title {
+            font-family: var(--font-logo);
+            color: var(--accent-color);
+            margin-bottom: 40px;
+            font-size: 2rem;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            gap: 30px;
         }
 
+        /* Organic Cards */
         .card {
-            border: 1px solid #333;
-            padding: 20px;
-            transition: 0.3s;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px; /* Rounded corners for organic feel */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s ease;
+        }
+
+        .card h3 {
+            font-family: var(--font-logo);
+            margin-bottom: 10px;
+            color: var(--text-color);
         }
 
         .card:hover {
+            transform: translateY(-10px); /* Lifts up slowly */
             border-color: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Button */
+        /* Organic Button */
         .cta-button {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: transparent;
+            margin-top: 40px;
+            padding: 15px 50px;
+            background: rgba(214, 140, 158, 0.1);
             border: 1px solid var(--accent-color);
+            border-radius: 50px; /* Pill shape */
             color: var(--accent-color);
-            font-family: var(--font-main);
+            font-family: var(--font-body);
             font-size: 1rem;
             cursor: pointer;
             transition: 0.3s;
@@ -126,28 +161,29 @@ HTML
         .cta-button:hover {
             background: var(--accent-color);
             color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(214, 140, 158, 0.4);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px;
             font-size: 0.8rem;
-            color: #555;
+            opacity: 0.5;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         /* Keyframes */
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); } /* Floating up */
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">
-            <img src="Simple%20Malware.png" alt="MALWARE Logo">
-        </div>
+        <div class="logo-text">malware.sys</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#work">Projects</a>
@@ -156,72 +192,54 @@ HTML
     </nav>
 
     <header class="hero">
-        <img src="Simple%20Malware.png" alt="MALWARE Brand Logo" class="hero-logo">
-        <p class="subtitle" id="subtitle-text">INFECTIOUS DESIGN // SYSTEM OVERRIDE</p>
-        <button class="cta-button" onclick="scrambleText()">INITIATE PROTOCOL</button>
+        <h1 class="brand-name">MALWARE</h1>
+        <p class="subtitle">soft systems // organic errors</p>
+        <button class="cta-button" onclick="softGlitch()">ENTER SYSTEM</button>
     </header>
 
     <section id="about" class="section">
-        <h2>// SYSTEM_LOG: ABOUT</h2>
-        <p style="margin-top: 20px; max-width: 600px;">
-            Malware is not a bug; it's a feature. We specialize in disruptive aesthetics, high-contrast visuals, and breaking the rules of traditional design.
+        <h2 class="section-title">01_ABOUT</h2>
+        <p style="max-width: 600px; line-height: 2;">
+            We explore the beauty in system failures. Moving away from hard crashes into soft reboots. Our design philosophy blends the digital past with organic futures.
         </p>
     </section>
 
     <section id="work" class="section">
-        <h2>// DIRECTORY: PROJECTS</h2>
+        <h2 class="section-title">02_DIRECTORY</h2>
         <div class="grid">
             <div class="card">
-                <h3>PROJECT_01</h3>
-                <p>Web Development</p>
+                <h3>Floral_Code</h3>
+                <p>Web design that feels alive. Growing borders and breathing animations.</p>
             </div>
             <div class="card">
-                <h3>PROJECT_02</h3>
-                <p>Cyber Security Branding</p>
+                <h3>Soft_Error</h3>
+                <p>Branding for the digital age, focused on muted tones and rounded pixels.</p>
             </div>
             <div class="card">
-                <h3>PROJECT_03</h3>
-                <p>Glitch Art Series</p>
+                <h3>Y2K_Archive</h3>
+                <p>Restoring the aesthetic of the early web with modern sensibilities.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 MALWARE BRAND. ALL RIGHTS RESERVED.</p>
+        <p>&copy; 2025 MALWARE. All systems stable.</p>
     </footer>
 
     <script>
-        // --- JAVASCRIPT INTERACTIVITY ---
-        
-        // Function to scramble text effect on the button click
-        function scrambleText() {
-            const title = document.getElementById('subtitle-text');
-            const originalText = title.innerText;
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
-            let iterations = 0;
+        // A softer interaction script
+        function softGlitch() {
+            const title = document.querySelector('.brand-name');
+            const originalText = "MALWARE";
+            const chars = "ma1war3_sy$tem"; // Less random, more thematic characters
             
-            const interval = setInterval(() => {
-                title.innerText = title.innerText.split('')
-                    .map((letter, index) => {
-                        if(index < iterations) {
-                            return originalText[index];
-                        }
-                        return characters[Math.floor(Math.random() * 26)];
-                    })
-                    .join('');
-                
-                if(iterations >= originalText.length){ 
-                    clearInterval(interval);
-                    title.innerText = originalText;
-                }
-                
-                iterations += 1/3;
-            }, 30);
+            // Temporary text shift
+            title.innerText = "l0ad_ing...";
+            
+            setTimeout(() => {
+                title.innerText = originalText;
+            }, 800);
         }
-
-        // Console "Easter Egg" for developers
-        console.log("%c WARNING: AUTHORIZED ACCESS ONLY ", "background: red; color: white; font-size: 20px; padding: 5px;");
-        console.log("Welcome to the Malware Brand backend.");
     </script>
 </body>
 </html>
